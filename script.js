@@ -4,14 +4,14 @@ const boardSizeBtn = document.getElementById('boardSize');
 
 init()
 
-function init(){
+function init() {
     initSize();
     initBoard();
 }
 
-function initBoard(){
+function initBoard() {
     let board = document.querySelector('.board');
-    for(let i = 0; i< Math.pow(size, 2); i++){
+    for (let i = 0; i < Math.pow(size, 2); i++) {
         const cell = document.createElement('div');
         cell.classList.add('cell');
         board.appendChild(cell);
@@ -20,17 +20,17 @@ function initBoard(){
     document.documentElement.style.setProperty('--board-size', size);
 }
 
-function clear(){
+function clear() {
     cells.forEach(cell => {
-		cell.remove();
-	});
+        cell.remove();
+    });
 }
 
-function initSize(){
+function initSize() {
     boardSizeBtn.addEventListener('change', () => onSizeChanged());
 }
 
-function onSizeChanged(){
+function onSizeChanged() {
     clear();
     size = boardSizeBtn.value;
     console.log('size changed to ->' + size);
