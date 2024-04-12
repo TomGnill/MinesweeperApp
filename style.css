@@ -1,6 +1,7 @@
 :root {
-    --bg: #7a7a7a;
-    --bg-cell: #f2f2f2;
+    --bg: #f2f2f2;
+    --bg-cell: #b9b9b9;
+    --bg-cell-opened: #f2f2f2;
     --filled-bg: #d9d9d9;
     --text-color: #222222;
     --alt-text-color: #ffffff;
@@ -58,7 +59,7 @@ body {
     margin-bottom: 3vmin;
 }
 
-.flag,
+.flagMode,
 .opened,
 .difficulty_change,
 .closed {
@@ -67,13 +68,17 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: var(--border-radius);
-    background-color: var(--bg-cell);
+    background-color: var(--bg);
     color: var(--text-color);
     /* cursor: pointer; */
     height: 6vmin;
     -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
     box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
+
+.flagMode{
+    cursor: pointer;
 }
 
 .opened_emj,
@@ -141,4 +146,19 @@ body {
     -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
     box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
+
+.cell.opened{
+    background-color: var(--bg-cell-opened);
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+    -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+}
+
+.flagMode.selected
+{
+    background-color: var(--selected);
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+    -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
 }
